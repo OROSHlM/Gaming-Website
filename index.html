@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Gaming | Игровой Портал</title>
+    <!-- Плавные шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Фоновые элементы -->
+    <div class="bg-glow top-left"></div>
+    <div class="bg-glow bottom-right"></div>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-home">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>NEXUS</span>
+            </a>
+            
+            <div class="search-bar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Поиск игр, жанров...">
+            </div>
+            
+            <div class="nav-links">
+                <button class="nav-btn active" id="btn-explore">Каталог</button>
+                <button class="nav-btn" id="btn-news">Новости</button>
+                <button class="nav-btn" id="btn-tournaments">Турниры</button>
+            </div>
+            
+            <div class="user-actions">
+                <button class="icon-btn" title="Уведомления"><i class="fa-solid fa-bell"></i><span class="badge">3</span></button>
+                <button class="icon-btn" title="Вишлист"><i class="fa-solid fa-heart"></i></button>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=User&background=6d28d9&color=fff" alt="Profile" class="avatar">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент (SPA View Container) -->
+    <main id="app-content">
+        <!-- Сюда с помощью JS будут подгружаться страницы: Главная, Детали игры, и т.д. -->
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-gamepad"></i> NEXUS
+            </div>
+            <p>Новейшие обзоры, честные отзывы и огромный каталог игр. Создано для геймеров.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Nexus Gaming. Все права защищены.
+        </div>
+    </footer>
+
+    <!-- Шаблоны для JS рендеринга (Скрыты) -->
+    <template id="home-view-template">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge-new">⚡ Тренд недели</div>
+                <h1>Cyberpunk 2077: Phantom Liberty</h1>
+                <p>Вернитесь в Найт-Сити в новом шпионском триллере. Исследуйте опасный район Догтаун и спасите президента.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">Смотреть обзор <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn btn-secondary"><i class="fa-solid fa-plus"></i> В вишлист</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Популярные жанры</h2>
+            <div class="category-grid" id="categoryGrid">
+                <!-- Категории генерируются JS -->
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="section-header">
+                <h2>Каталог игр</h2>
+                <div class="filters">
+                    <select id="platformFilter">
+                        <option value="all">Все платформы</option>
+                        <option value="PC">PC</option>
+                        <option value="PS5">PlayStation 5</option>
+                        <option value="Xbox">Xbox Series X|S</option>
+                    </select>
+                    <select id="sortFilter">
+                        <option value="popular">Популярные</option>
+                        <option value="rating">Топ рейтинг</option>
+                        <option value="newest">Новинки</option>
+                    </select>
+                </div>
+            </div>
+            <div class="games-grid" id="gamesGrid">
+                <!-- Карточки генерируются JS -->
+            </div>
+            <div class="load-more">
+                <button class="btn btn-secondary">Загрузить еще</button>
+            </div>
+        </section>
+    </template>
+
+    <template id="game-detail-template">
+        <!-- Детальная страница игры рендерится JS скриптом -->
+        <div class="game-detail-view" id="gameDetailContainer"></div>
+    </template>
+
+    <!-- Подключаем логику -->
+    <script src="app.js"></script>
+</body>
+</html>
