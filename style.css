@@ -252,7 +252,7 @@ main {
   padding: 4rem;
   /* Используем фоновое изображение Cyberpunk */
   background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 100%),
-              url('https://images.hdqwalls.com/download/cyberpunk-2077-game-wide-3840x2160.jpg') center/cover no-repeat;
+              url('https://images7.alphacoders.com/942/thumb-1920-942358.jpg') center/cover no-repeat;
   border: 1px solid var(--glass-border);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
@@ -283,6 +283,7 @@ main {
   font-weight: 800;
   background: linear-gradient(to right, #fff, #cbd5e1);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -555,6 +556,7 @@ main {
   margin-bottom: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   flex: 1;
